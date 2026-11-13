@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  --color-almond: #F4EFE5;
+  --color-ivory: #FAF8F2;
+  --color-dusty-teal: #6F9290;
+  --color-deep-teal: #345B59;
+  --color-charcoal: #292D2C;
+  --color-beige: #DCD2C3;
+
+  --font-serif: "Cormorant Garamond", Georgia, Cambria, "Times New Roman", serif;
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+@layer base {
+  html {
+    background-color: #F4EFE5;
+    color: #292D2C;
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    overflow-x: hidden;
+    background-color: #F4EFE5;
+  }
+
+  h1, h2, h3, .font-editorial {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Custom subtle scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F4EFE5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #DCD2C3;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6F9290;
+}
+
+/* Hide scrollbar for horizontal editorial carousels */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Subtle organic grain overlay for luxury tactile feel */
+.editorial-grain {
+  background-image: radial-gradient(rgba(41, 45, 44, 0.03) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Refined focus rings */
+:focus-visible {
+  outline: 1.5px solid #6F9290;
+  outline-offset: 2px;
+}
